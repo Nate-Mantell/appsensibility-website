@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppSensibility - App & Web Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #3E3E3E;
+        }
+
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #3E3E3E;
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+
+        nav ul li a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+
+        nav ul li a:hover {
+            color: #21DFB9;
+        }
+
+
+        section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+
+        #hero {
+            background-color: #4D5F90;
+            color: #FFFFFF;
+            padding: 150px 20px;
+        }
+
+
+        #hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+
+        #hero p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+
+
+        #hero .cta-btn {
+            background-color: #21DFB9;
+            color: #FFFFFF;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+
+        #hero .cta-btn:hover {
+            background-color: #17B797;
+        }
+
+
+        #why-us, #expertise, #contact {
+            background-color: #D1A0C8;
+            color: #3E3E3E;
+        }
+
+
+        #expertise {
+            background-color: #FFFFFF;
+        }
+
+
+        #why-us h2, #expertise h2, #contact h2 {
+            margin-bottom: 30px;
+        }
+
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+
+        .grid img {
+            width: 50px;
+            height: 50px;
+        }
+
+
+        .grid span {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        #contact form input, #contact form textarea {
+            width: 80%;
+            max-width: 500px;
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #3E3E3E;
+            border-radius: 10px;
+            font-size: 1em;
+        }
+
+
+        #contact form button {
+            background-color: #21DFB9;
+            color: #FFFFFF;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+
+        #contact form button:hover {
+            background-color: #17B797;
+        }
+
+
+        footer {
+            background-color: #3E3E3E;
+            color: #FFFFFF;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#hero">What we do</a></li>
+            <li><a href="#why-us">Why us</a></li>
+            <li><a href="#expertise">Our expertise</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="hero">
+    <h1>AppSensibility</h1>
+    <p>App and Website Development Tailored to Your Needs</p>
+    <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+        Get Started
+    </button>
+</section>
+
+
+<section id="why-us">
+    <h2>Why Us?</h2>
+    <p>We specialize in hybrid mobile app development, practical app design, and agile methodology to deliver top-notch solutions.</p>
+</section>
+
+
+<section id="expertise">
+    <h2>Our Expertise</h2>
+    <p>We offer a wide range of services including:</p>
+    <ul>
+        <li>Software Product Consultation</li>
+        <li>Mobile App Development</li>
+        <li>Progressive Web Apps</li>
+        <li>UI/UX Design</li>
+        <li>Mobile Responsive Website Development</li>
+    </ul>
+    <div class="grid">
+        <div>
+            <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular">
+            <span>Angular</span>
+        </div>
+        <div>
+            <img src="https://ionicframework.com/img/meta/ionic-framework-og.png" alt="Ionic">
+            <span>Ionic</span>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+            <span>JavaScript</span>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+            <span>HTML</span>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+            <span>PHP</span>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL">
+            <span>SQL</span>
+        </div>
+        <div>
+            <img src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg" alt="Firebase">
+            <span>Firebase</span>
+        </div>
+        <div>
+            <img src="https://cloud.google.com/images/social-icon-google-cloud-1200-630.png" alt="Google Cloud">
+            <span>Google Cloud</span>
+        </div>
+        <div>
+            <img src="https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/Powered-by-Amazon-Web-Services_Logo_Full-Color-Vertical.c7ef66e9daddfdf290da3c3e0dbde1a38a0d7e6f.png" alt="AWS">
+            <span>AWS</span>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p>Address: 514 Mountain Ave, Altoona PA 16602</p>
+    <p>Email: <a href="mailto:info@appsensibility.com">info@appsensibility.com</a></p>
+    <p>Phone: <a href="tel:+13473049243">+1 347 304 9243</a></p>
+</section>
+
+
+<footer>
+    <p>&copy; 2024 AppSensibility. All Rights Reserved.</p>
+</footer>
+
+
+</body>
+</html>
