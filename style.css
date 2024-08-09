@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #3E3E3E;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 15px 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E0E0E0; /* Instead of shadow */
+}
+
+header img.logo {
+    height: 50px;
+    margin-left: 120px; /* Adjust for desktop margin */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 120px; /* Adjust for desktop margin */
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #3E3E3E;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4D5F90;
+}
+
+.content {
+    padding: 100px 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    text-align: center; /* Center text */
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('hero-background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 150px 20px;
+    text-align: center; /* Center text */
+    background-attachment: fixed;
+}
+
+#hero .content {
+    text-align: left; /* Left-align text inside hero section */
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+#hero .cta-btn {
+    background-color: #21DFB9;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#hero .cta-btn:hover {
+    background-color: #17B797;
+}
+
+/* Sections with white background */
+#what-we-do, #why-us, #expertise, #contact {
+    padding: 100px 20px;
+    background-color: #FFFFFF; /* White background for all sections */
+}
+
+#why-us, #contact {
+    background-color: #D1A0C8; /* Add specific background color if needed */
+}
+
+#expertise {
+    background-color: #FFFFFF; /* Ensure white background */
+}
+
+#why-us h2, #expertise h2, #contact h2 {
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.grid img {
+    width: 50px;
+    height: 50px;
+}
+
+.grid span {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form input, #contact form textarea {
+    width: 80%;
+    max-width: 500px;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #3E3E3E;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+#contact form button {
+    background-color: #21DFB9;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact form button:hover {
+    background-color: #17B797;
+}
+
+footer {
+    background-color: #3E3E3E;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    header img.logo, nav ul {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .content {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header img.logo, nav ul {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .content {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
