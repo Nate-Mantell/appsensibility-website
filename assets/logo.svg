@@ -1,0 +1,17 @@
+<svg width="400" height="150" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" x="54" id="svg_18" height="99.904" width="345.85713" y="25.00004" stroke-width="0" fill="#e15fe6"/>
+  <path stroke="#000" stroke-width="0" id="svg_1" d="m-0.14,111.88813l51,-97.75l51,97.75l-102,0z" fill="#1f3aa2"/>
+  <path stroke="#000" stroke-width="0" id="svg_3" d="m22.86,111.88813l28.5,-54.625l28.5,54.625l-57,0z" fill="#e15fe6"/>
+  <text transform="matrix(1.73875 0 0 1.73875 -64.5196 -81.4868)" font-weight="bold" stroke="#000" xml:space="preserve" text-anchor="start" font-family="'JetBrains Mono'" font-size="23" id="svg_11" y="96.31277" x="84.62807" stroke-width="0" fill="#ffffff">ppSensibility</text>
+  <path stroke="#000" stroke-width="0" id="svg_4" d="m57.86,111.88813l21,-40.25l21,40.25l-42,0z" fill="#1f3aa2"/>
+  <path stroke="#000" stroke-width="0" id="svg_7" d="m36.8337,111.88813l14.5,-27.79167l14.5,27.79167l-29,0z" fill="#1f3aa2"/>
+  <path stroke="#000" stroke-width="0" id="svg_8" d="m36.8337,111.88813l14.5,-27.79167l14.5,27.79167l-29,0z" fill="#1f3aa2"/>
+  <rect x="0" stroke="#000" id="svg_9" height="14" width="250" y="111" stroke-width="0" fill="#e15fe6"/>
+  <rect stroke="#000" id="svg_12" height="14" width="21" y="11" x="40" stroke-width="0" fill="#ffffff"/>
+  <rect stroke="#000" id="svg_13" height="14" width="21" y="49.01351" x="40" stroke-width="0" fill="#1f3aa2"/>
+  <rect stroke="#000" id="svg_14" height="12" width="18" y="77.03136" x="42" stroke-width="0" fill="#e15fe6"/>
+ </g>
+</svg>
