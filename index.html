@@ -16,20 +16,19 @@
         header {
             position: fixed;
             top: 0;
-            width: calc(100% - 240px); /* Desktop width minus margins */
-            margin-left: 120px; /* Desktop left margin */
+            width: 100%;
             background-color: #FFFFFF;
             padding: 15px 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             justify-content: space-between;
+            border-bottom: 1px solid #E0E0E0; /* Instead of shadow */
         }
 
         header img.logo {
             height: 50px;
-            margin-left: 20px;
+            margin-left: 120px; /* Adjust for desktop margin */
         }
 
         nav ul {
@@ -38,7 +37,7 @@
             padding: 0;
             display: flex;
             align-items: center;
-            margin-right: 20px;
+            margin-right: 120px; /* Adjust for desktop margin */
         }
 
         nav ul li {
@@ -58,9 +57,8 @@
             color: #4D5F90;
         }
 
-        section {
+        .content {
             padding: 100px 20px;
-            text-align: center;
             margin-left: 120px;
             margin-right: 120px;
         }
@@ -97,12 +95,7 @@
         }
 
         #why-us, #expertise, #contact {
-            background-color: #D1A0C8;
-            color: #3E3E3E;
-        }
-
-        #expertise {
-            background-color: #FFFFFF;
+            padding: 100px 20px;
         }
 
         #why-us h2, #expertise h2, #contact h2 {
@@ -172,18 +165,24 @@
 
         /* Media Queries */
         @media (max-width: 1024px) {
-            header, section {
+            header img.logo, nav ul {
                 margin-left: 40px;
                 margin-right: 40px;
-                width: calc(100% - 80px); /* Tablet width minus margins */
+            }
+            .content {
+                margin-left: 40px;
+                margin-right: 40px;
             }
         }
 
         @media (max-width: 768px) {
-            header, section {
+            header img.logo, nav ul {
                 margin-left: 30px;
                 margin-right: 30px;
-                width: calc(100% - 60px); /* Mobile width minus margins */
+            }
+            .content {
+                margin-left: 30px;
+                margin-right: 30px;
             }
         }
     </style>
@@ -203,80 +202,88 @@
 </header>
 
 <section id="hero">
-    <h1>AppSensibility</h1>
-    <p>App and Website Development Tailored to Your Needs</p>
-    <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
-        Get Started
-    </button>
+    <div class="content">
+        <h1>AppSensibility</h1>
+        <p>App and Website Development Tailored to Your Needs</p>
+        <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+            Get Started
+        </button>
+    </div>
 </section>
 
 <section id="why-us">
-    <h2>Why Us?</h2>
-    <p>We specialize in hybrid mobile app development, practical app design, and agile methodology to deliver top-notch solutions.</p>
+    <div class="content">
+        <h2>Why Us?</h2>
+        <p>We specialize in hybrid mobile app development, practical app design, and agile methodology to deliver top-notch solutions.</p>
+    </div>
 </section>
 
 <section id="expertise">
-    <h2>Our Expertise</h2>
-    <p>We offer a wide range of services including:</p>
-    <ul>
-        <li>Software Product Consultation</li>
-        <li>Mobile App Development</li>
-        <li>Progressive Web Apps</li>
-        <li>UI/UX Design</li>
-        <li>Mobile Responsive Website Development</li>
-    </ul>
-    <div class="grid">
-        <div>
-            <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular">
-            <span>Angular</span>
-        </div>
-        <div>
-            <img src="https://ionicframework.com/img/meta/ionic-framework-og.png" alt="Ionic">
-            <span>Ionic</span>
-        </div>
-        <div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
-            <span>JavaScript</span>
-        </div>
-        <div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
-            <span>HTML</span>
-        </div>
-        <div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
-            <span>PHP</span>
-        </div>
-        <div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL">
-            <span>SQL</span>
-        </div>
-        <div>
-            <img src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg" alt="Firebase">
-            <span>Firebase</span>
-        </div>
-        <div>
-            <img src="https://cloud.google.com/images/social-icon-google-cloud-1200-630.png" alt="Google Cloud">
-            <span>Google Cloud</span>
-        </div>
-        <div>
-            <img src="https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/Powered-by-Amazon-Web-Services_Logo_Full-Color-Vertical.c7ef66e9daddfdf290da3c3e0dbde1a38a0d7e6f.png" alt="AWS">
-            <span>AWS</span>
+    <div class="content">
+        <h2>Our Expertise</h2>
+        <p>We offer a wide range of services including:</p>
+        <ul>
+            <li>Software Product Consultation</li>
+            <li>Mobile App Development</li>
+            <li>Progressive Web Apps</li>
+            <li>UI/UX Design</li>
+            <li>Mobile Responsive Website Development</li>
+        </ul>
+        <div class="grid">
+            <div>
+                <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular">
+                <span>Angular</span>
+            </div>
+            <div>
+                <img src="https://ionicframework.com/img/meta/ionic-framework-og.png" alt="Ionic">
+                <span>Ionic</span>
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+                <span>HTML</span>
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+                <span>PHP</span>
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL">
+                <span>SQL</span>
+            </div>
+            <div>
+                <img src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg" alt="Firebase">
+                <span>Firebase</span>
+            </div>
+            <div>
+                <img src="https://cloud.google.com/images/social-icon-google-cloud-1200-630.png" alt="Google Cloud">
+                <span>Google Cloud</span>
+            </div>
+            <div>
+                <img src="https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/Powered-by-Amazon-Web-Services_Logo_Full-Color-Vertical.c7ef66e9daddfdf290da3c3e0dbde1a38a0d7e6f.png" alt="AWS">
+                <span>AWS</span>
+            </div>
         </div>
     </div>
 </section>
 
 <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="text" placeholder="Subject" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-    <p>Address: 514 Mountain Ave, Altoona PA 16602</p>
-    <p>Email: <a href="mailto:info@appsensibility.com">info@appsensibility.com</a></p>
-    <p>Phone: <a href="tel:+13473049243">+1 347 304 9243</a></p>
+    <div class="content">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Address: 514 Mountain Ave, Altoona PA 16602</p>
+        <p>Email: <a href="mailto:info@appsensibility.com">info@appsensibility.com</a></p>
+        <p>Phone: <a href="tel:+13473049243">+1 347 304 9243</a></p>
+    </div>
 </section>
 
 <footer>
