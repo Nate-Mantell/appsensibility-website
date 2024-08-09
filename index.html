@@ -16,7 +16,8 @@
         header {
             position: fixed;
             top: 0;
-            width: 100%;
+            width: calc(100% - 240px); /* Desktop width minus margins */
+            margin-left: 120px; /* Desktop left margin */
             background-color: #FFFFFF;
             padding: 15px 0;
             z-index: 1000;
@@ -60,6 +61,8 @@
         section {
             padding: 100px 20px;
             text-align: center;
+            margin-left: 120px;
+            margin-right: 120px;
         }
 
         #hero {
@@ -165,6 +168,23 @@
 
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            header, section {
+                margin-left: 40px;
+                margin-right: 40px;
+                width: calc(100% - 80px); /* Tablet width minus margins */
+            }
+        }
+
+        @media (max-width: 768px) {
+            header, section {
+                margin-left: 30px;
+                margin-right: 30px;
+                width: calc(100% - 60px); /* Mobile width minus margins */
+            }
         }
     </style>
 </head>
