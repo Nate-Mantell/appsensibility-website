@@ -180,7 +180,17 @@ section p, li {
 }
 
 #why-us, #contact {
-    background-color: #E15FE6; /* Add specific background color if needed */
+    background-image: url('assets/backgrounds/pexels-pixabay-257923-lightened-1920-q50.webp');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#contact {
+    background-image: url('assets/backgrounds/pexels-fauxels-3184451-lightened-1920-q50.webp');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #expertise {
