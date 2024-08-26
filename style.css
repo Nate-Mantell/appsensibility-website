@@ -57,6 +57,15 @@ nav ul li a:hover {
     text-align: center; /* Center text */
 }
 
+.centered-para-container {
+    max-width:600px;
+    margin: auto;
+}
+
+.centered-para-container p {
+    font-size: 1.8em;
+}
+
 /* Hero Section */
 #hero {
     position: relative;
