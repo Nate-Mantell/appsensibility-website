@@ -161,6 +161,18 @@ nav ul li a:hover {
     font-size: 4em;
 }
 
+section h2 {
+    font-size: 3em;
+}
+
+section h3 {
+    font-size: 2em;
+}
+
+section p, li {
+    font-size: 1.4em;
+}
+
 /* Sections with white background */
 #what-we-do, #why-us, #expertise, #contact {
     padding: 100px 20px;
@@ -233,6 +245,56 @@ nav ul li a:hover {
     font-size: 18px; 
 }
 
+.contact-secton-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    /*gap: 3em;  Adjust gap between items if needed */
+}
+
+.contact-secton-cell {
+    box-sizing: border-box; /* Ensures padding/margins do not affect width */
+}
+
+.contact-secton-cell-email-phone,
+.contact-secton-cell-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0em;
+    flex: 1 1 25%; /* Flex items take up 25% of the width */
+    max-width: 25%; /* Ensures max width of 25% */
+}
+
+.contact-secton-cell-form {
+    flex: 1 1 50%; /* Flex item takes up 50% of the width */
+    max-width: 50%; /* Ensures max width of 50% */
+}
+
+/* Responsive behavior for screen sizes 1024px or less */
+@media (max-width: 1024px) {
+    .contact-secton-grid {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .contact-secton-cell {
+        flex: 1 1 100%; /* Each item takes up 100% width */
+        max-width: 100%; /* Ensure max width of 100% */
+    }
+
+    .contact-secton-cell-form {
+        order: 1; /* Form is on top */
+    }
+
+    .contact-secton-cell-email-phone {
+        order: 2; /* Email/Phone is in the middle */
+    }
+
+    .contact-secton-cell-address {
+        order: 3; /* Address is on the bottom */
+    }
+}
+
+
 #contact form {
     display: flex;
     flex-direction: column;
@@ -250,19 +312,20 @@ nav ul li a:hover {
 }
 
 #contact form button {
-    background-color: #21DFB9;
-    color: #FFFFFF;
+    /*background-color: #21DFB9;*/
+    
     padding: 15px 30px;
     border: none;
     border-radius: 10px;
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s;
+    color: #FFFFFF;
 }
 
-#contact form button:hover {
+/*#contact form button:hover {
     background-color: #17B797;
-}
+}*/
 
 footer {
     background-color: #011124;

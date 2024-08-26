@@ -156,16 +156,34 @@
 <section id="contact">
     <div class="content">
         <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="text" placeholder="Subject" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p>Address: 514 Mountain Ave, Altoona PA 16602</p>
-        <p>Email: <a href="mailto:info@appsensibility.com">info@appsensibility.com</a></p>
-        <p>Phone: <a href="tel:+13473049243">+1 347 304 9243</a></p>
+        <div class="contact-secton-grid">
+            <div class="contact-secton-cell contact-secton-cell-email-phone">
+                <div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@appsensibility.com">info@appsensibility.com</a></p>
+                </div>
+                <div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+13473049243">+1 347 304 9243</a></p>
+                </div>
+            </div>
+            <div class="contact-secton-cell contact-secton-cell-form">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button class="tertiary-bg-color" type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-secton-cell contact-secton-cell-address">
+                <div>
+                    <h3>Address</h3>
+                    <p>514 Mountain Ave</p>
+                    <p>Altoona PA 16602</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
