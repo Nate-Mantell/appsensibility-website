@@ -50,6 +50,10 @@ nav ul li a:hover {
     color: #1F3AA2;
 }
 
+a, a:hover, a:active, a:visited {
+    color:#1F3AA2;
+}
+
 .content {
     padding: 100px 20px;
     margin-left: 120px;
