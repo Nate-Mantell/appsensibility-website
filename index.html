@@ -9,14 +9,19 @@
 <body>
 
 <header>
-    <a href="#hero"><img src="assets/logo.png" alt="AppSensibility Logo" class="logo"></a>
+    <a href="#hero"><img src="assets/logo-basic-small.svg" alt="AppSensibility Logo" class="logo"></a>
     <nav>
-        <ul>
+        <ul class="nav-menu">
             <li><a href="#what-we-do">What we do</a></li>
             <li><a href="#why-us">Why us</a></li>
             <li><a href="#expertise">Our expertise</a></li>
             <li><a href="#contact">Contact us</a></li>
         </ul>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 </header>
 
@@ -212,7 +217,15 @@
                 behavior: 'smooth',
                 block: 'start'
             });
+
+            document.querySelector('.nav-menu').classList.remove('active');
         });
+    });
+</script>
+
+<script>
+    document.querySelector('.hamburger-menu').addEventListener('click', function() {
+        document.querySelector('.nav-menu').classList.toggle('active');
     });
 </script>
 

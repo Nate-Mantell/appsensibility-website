@@ -1,0 +1,14 @@
+<svg width="100" height="150" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <path fill="#1f3aa2" d="m-0.14,111.88813l51,-97.75l51,97.75l-102,0z" id="svg_1" stroke-width="0" stroke="#000"/>
+  <path fill="#e15fe6" d="m22.86,111.88813l28.5,-54.625l28.5,54.625l-57,0z" id="svg_3" stroke-width="0" stroke="#000"/>
+  <path fill="#1f3aa2" d="m57.86,111.88813l21,-40.25l21,40.25l-42,0z" id="svg_4" stroke-width="0" stroke="#000"/>
+  <path fill="#1f3aa2" d="m36.8337,111.88813l14.5,-27.79167l14.5,27.79167l-29,0z" id="svg_7" stroke-width="0" stroke="#000"/>
+  <path fill="#1f3aa2" d="m36.8337,111.88813l14.5,-27.79167l14.5,27.79167l-29,0z" id="svg_8" stroke-width="0" stroke="#000"/>
+  <rect fill="#ffffff" stroke-width="0" x="40" y="11" width="21" height="14" id="svg_12" stroke="#000"/>
+  <rect fill="#1f3aa2" stroke-width="0" x="40" y="49.01351" width="21" height="14" id="svg_13" stroke="#000"/>
+  <rect fill="#e15fe6" stroke-width="0" x="42" y="77.03136" width="18" height="12" id="svg_14" stroke="#000"/>
+ </g>
+</svg>
