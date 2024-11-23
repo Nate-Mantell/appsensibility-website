@@ -73,7 +73,7 @@ a, a:hover, a:active, a:visited {
 /* Hero Section */
 #hero {
     position: relative;
-    background-image: url('assets/hero-background.webp'); /* Replace with your background image */
+    background-image: url('assets/hero-background-vec-png8.webp'); /* Replace with your background image */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
