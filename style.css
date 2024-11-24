@@ -488,3 +488,56 @@ html {
         text-align: right;
     }
 }
+
+/* what-we-do grid item animation */
+/* Base grid-item styling remains as is */
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    text-align: center;
+    position: relative; /* Required for overlay effect */
+    overflow: hidden; /* Ensures the overlay stays within bounds */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth animations */
+}
+
+/* Add the hover effect for screen sizes > 1140px */
+@media (min-width: 1140px) {
+    .grid-item:hover {
+        transform: scale(1.1); /* Slightly expand on hover */
+    }
+
+    .grid-item:hover .image-container::after {
+        background-color: rgba(255, 165, 90, 0.6); /* Pale warm orange */
+    }
+}
+
+/* Add an overlay effect inside the image-container */
+.image-container {
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* For the overlay */
+}
+
+.image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Default is no overlay */
+    transition: background-color 0.3s ease; /* Smooth overlay transition */
+    z-index: 1; /* Ensure the overlay is above the image */
+}
+
+/* Ensure text content stays on top */
+.grid-item h3 {
+    position: relative;
+    z-index: 2;
+}
+
