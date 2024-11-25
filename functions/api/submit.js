@@ -3,32 +3,37 @@
  */
 export async function onRequestPost(context) {
     try {
-      /*let input = await context.request.formData();
-  
-      // Convert FormData to JSON
-      // NOTE: Allows multiple values per key
-      let output = {};
-      for (let [key, value] of input) {
+        /*let input = await context.request.formData();
+
+        // Convert FormData to JSON
+        // NOTE: Allows multiple values per key
+        let output = {};
+        for (let [key, value] of input) {
         let tmp = output[key];
         if (tmp === undefined) {
-          output[key] = value;
+            output[key] = value;
         } else {
-          output[key] = [].concat(tmp, value);
+            output[key] = [].concat(tmp, value);
         }
-      }
-  
-      let pretty = JSON.stringify(output, null, 2);
-      console.log("Got form sumission", pretty);
-      return new Response(pretty, {
+        }
+
+        let pretty = JSON.stringify(output, null, 2);
+        console.log("Got form sumission", pretty);
+        return new Response(pretty, {
         headers: {
-          "Content-Type": "application/json;charset=utf-8",
+            "Content-Type": "application/json;charset=utf-8",
         },
-      });*/
-      const jsonBody = await context.request.json(); // Parse JSON payload
+        });*/
+
+        const jsonBody = await context.request.json(); // Parse JSON payload
+
+        // Access the SendGrid API key from environment variables
+        const sendGridApiKey = context.env.SENDGRID_API_KEY;
+
         console.log("Received JSON body:", JSON.stringify(jsonBody, null, 2));
 
         // Send email using SendGrid
-        const emailResponse = await sendEmail(jsonBody);
+        const emailResponse = await sendEmail(jsonBody, sendGridApiKey);
 
         return new Response(JSON.stringify(jsonBody, null, 2), {
             headers: { "Content-Type": "application/json;charset=utf-8" },
@@ -40,11 +45,11 @@ export async function onRequestPost(context) {
 
 
   // Function to send an email using SendGrid
-async function sendEmail(formData) {
+async function sendEmail(formData, sendGridApiKey) {
     console.log("sendEmail - begin");
 
     try {
-        const sendGridApiKey = process?.env?.SENDGRID_API_KEY || 'couldnt-read-env'; // Replace with your SendGrid API key
+        //const sendGridApiKey = process?.env?.SENDGRID_API_KEY || 'couldnt-read-env'; // Replace with your SendGrid API key
         console.log("SendGrid API key:", sendGridApiKey);
         const sendGridUrl = "https://api.sendgrid.com/v3/mail/send";
 
