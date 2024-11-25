@@ -42,7 +42,7 @@ export async function onRequestPost(context) {
   // Function to send an email using SendGrid
 async function sendEmail(formData) {
     console.log("sendEmail - begin");
-    const sendGridApiKey = SENDGRID_API_KEY || 'couldnt-read-env'; // Replace with your SendGrid API key
+    const sendGridApiKey = 'testkeystr';//SENDGRID_API_KEY || 'couldnt-read-env'; // Replace with your SendGrid API key
     console.log("SendGrid API key:", sendGridApiKey);
     const sendGridUrl = "https://api.sendgrid.com/v3/mail/send";
 
