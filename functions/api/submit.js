@@ -97,7 +97,7 @@ async function sendEmail(formData, sendGridApiKey) {
 
         console.log("Sent email to SendGrid - response.ok");
 
-        return response.json();
+        return "email sent ok";
     } catch (err) {
         console.log("Failed to send email:", err);
     }
