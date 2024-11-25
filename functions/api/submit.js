@@ -35,6 +35,8 @@ export async function onRequestPost(context) {
         // Send email using SendGrid
         const emailResponse = await sendEmail(jsonBody, sendGridApiKey);
 
+        console.log("finished email method", emailResponse);
+
         return new Response(JSON.stringify(jsonBody, null, 2), {
             headers: { "Content-Type": "application/json;charset=utf-8" },
         });
