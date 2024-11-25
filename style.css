@@ -508,9 +508,9 @@ html {
         transform: scale(1.1); /* Slightly expand on hover */
     }
 
-    .grid-item:hover .image-container::after {
-        background-color: rgba(255, 165, 90, 0.6); /* Pale warm orange */
-    }
+    /*.grid-item:hover .image-container::after {
+        background-color: rgba(255, 165, 90, 0.6);
+    }*/
 }
 
 /* Add an overlay effect inside the image-container */
