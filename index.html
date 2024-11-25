@@ -213,9 +213,10 @@
                     <input type="email" placeholder="Your Email" required>
                     <input type="text" placeholder="Subject" required>
                     <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <div id="contactForm-success-message" class="contactForm-success-message">Your submission was successful!<br/>We will be in touch</div>
                     <button class="tertiary-bg-color" type="submit">Send Message</button>
                 </form>
-                <div id="contactForm-success-message" class="contactForm-success-message">Your submission was successful!<br/>We will be in touch</div>
+                
             </div>
             <div class="contact-secton-cell contact-secton-cell-address">
                 <div>
@@ -279,7 +280,7 @@
                     setTimeout(() => {
                         successMessage.classList.remove('contactForm-success-message-show');
                     }, 5000);
-                    
+
                     //alert('Message sent successfully!');
                     console.log("Form response:", response);
                     form.reset(); // Clear the form
