@@ -392,6 +392,18 @@ section p, li {
     color: #FFFFFF;
 }
 
+.contactForm-success-message {
+    display:none;
+    margin-top: 1em;
+    text-align: center;
+    color: #000;
+    font-size: 1.2em;
+}
+
+.contactForm-success-message-show {
+    display:block;
+}
+
 /*#contact form button:hover {
     background-color: #17B797;
 }*/

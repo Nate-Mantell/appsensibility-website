@@ -215,6 +215,7 @@
                     <textarea placeholder="Your Message" rows="5" required></textarea>
                     <button class="tertiary-bg-color" type="submit">Send Message</button>
                 </form>
+                <div id="contactForm-success-message" class="contactForm-success-message">Your submission was successful!<br/>We will be in touch</div>
             </div>
             <div class="contact-secton-cell contact-secton-cell-address">
                 <div>
@@ -254,6 +255,7 @@
 <script>
     // Get the form element
     const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('contactForm-success-message');
 
     // Attach a submit event listener
     form.addEventListener('submit', function (event) {
@@ -270,7 +272,15 @@
         })
             .then(response => {
                 if (response.ok) {
-                    alert('Message sent successfully!');
+                    // Show the success message
+                    successMessage.classList.add('contactForm-success-message-show');
+                    
+                    // Optionally, hide the success message after a delay (e.g., 5 seconds)
+                    setTimeout(() => {
+                        successMessage.classList.remove('contactForm-success-message-show');
+                    }, 5000);
+                    
+                    //alert('Message sent successfully!');
                     console.log("Form response:", response);
                     form.reset(); // Clear the form
                 } else {
