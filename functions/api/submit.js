@@ -3,7 +3,7 @@
  */
 export async function onRequestPost(context) {
     try {
-      let input = await context.request.formData();
+      /*let input = await context.request.formData();
   
       // Convert FormData to JSON
       // NOTE: Allows multiple values per key
@@ -23,7 +23,12 @@ export async function onRequestPost(context) {
         headers: {
           "Content-Type": "application/json;charset=utf-8",
         },
-      });
+      });*/
+      const jsonBody = await context.request.json(); // Parse JSON payload
+        console.log("Received JSON body:", JSON.stringify(jsonBody, null, 2));
+        return new Response(JSON.stringify(jsonBody, null, 2), {
+            headers: { "Content-Type": "application/json;charset=utf-8" },
+        });
     } catch (err) {
       return new Response("Error parsing JSON content", { status: 400 });
     }
