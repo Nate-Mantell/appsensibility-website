@@ -18,6 +18,7 @@ export async function onRequestPost(context) {
       }
   
       let pretty = JSON.stringify(output, null, 2);
+      console.log("Got form sumission", pretty);
       return new Response(pretty, {
         headers: {
           "Content-Type": "application/json;charset=utf-8",
