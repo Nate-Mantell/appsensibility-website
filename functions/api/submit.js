@@ -42,45 +42,52 @@ export async function onRequestPost(context) {
   // Function to send an email using SendGrid
 async function sendEmail(formData) {
     console.log("sendEmail - begin");
-    const sendGridApiKey = 'testkeystr';//SENDGRID_API_KEY || 'couldnt-read-env'; // Replace with your SendGrid API key
-    console.log("SendGrid API key:", sendGridApiKey);
-    const sendGridUrl = "https://api.sendgrid.com/v3/mail/send";
 
-    // Construct the email payload
-    const emailPayload = {
-        personalizations: [
-            {
-                to: [{ email: "nate@appsensibility.com" }], // Replace with your recipient email
-                subject: "New Contact Form Submission",
+    try {
+        const sendGridApiKey = 'testkeystr';//SENDGRID_API_KEY || 'couldnt-read-env'; // Replace with your SendGrid API key
+        console.log("SendGrid API key:", sendGridApiKey);
+        const sendGridUrl = "https://api.sendgrid.com/v3/mail/send";
+
+        // Construct the email payload
+        const emailPayload = {
+            personalizations: [
+                {
+                    to: [{ email: "nate@appsensibility.com" }], // Replace with your recipient email
+                    subject: "New Contact Form Submission",
+                },
+            ],
+            from: { email: "nate@appsensibility.com" }, // Replace with your sender email
+            content: [
+                {
+                    type: "text/plain",
+                    value: `
+                    You have a new form submission:
+                    Name: ${formData.name}
+                    Email: ${formData.email}
+                    Message: ${formData.message}
+                    `,
+                },
+            ],
+        };
+
+        // Send the email using fetch
+        const response = await fetch(sendGridUrl, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${sendGridApiKey}`,
+                "Content-Type": "application/json",
             },
-        ],
-        from: { email: "nate@appsensibility.com" }, // Replace with your sender email
-        content: [
-            {
-                type: "text/plain",
-                value: `
-                You have a new form submission:
-                Name: ${formData.name}
-                Email: ${formData.email}
-                Message: ${formData.message}
-                `,
-            },
-        ],
-    };
+            body: JSON.stringify(emailPayload),
+        });
 
-    // Send the email using fetch
-    const response = await fetch(sendGridUrl, {
-        method: "POST",
-        headers: {
-            "Authorization": `Bearer ${sendGridApiKey}`,
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(emailPayload),
-    });
+        if (!response.ok) {
+            throw new Error(`Failed to send email: ${response.statusText}`);
+        }
 
-    if (!response.ok) {
-        throw new Error(`Failed to send email: ${response.statusText}`);
+        return response.json();
+    } catch (err) {
+        console.error("Failed to send email:", err);
     }
 
-    return response.json();
+    return null;
 }
