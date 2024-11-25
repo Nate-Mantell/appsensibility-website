@@ -209,10 +209,9 @@
             </div>
             <div class="contact-secton-cell contact-secton-cell-form">
                 <form id="contactForm" method="POST" action="/api/submit">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <input type="text" name="fullname" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     <div id="contactForm-success-message" class="contactForm-success-message">Your submission was successful!<br/>We will be in touch</div>
                     <button class="tertiary-bg-color" type="submit">Send Message</button>
                 </form>
@@ -275,10 +274,9 @@
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name: form.elements['Your Name'].value,
-                email: form.elements['Your Email'].value,
-                subject: form.elements['Subject'].value,
-                message: form.elements['Your Message'].value,
+                name: form.elements['fullname'].value,
+                email: form.elements['email'].value,
+                message: form.elements['message'].value,
             }),
         })
             .then(response => {
