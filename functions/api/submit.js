@@ -26,6 +26,10 @@ export async function onRequestPost(context) {
       });*/
       const jsonBody = await context.request.json(); // Parse JSON payload
         console.log("Received JSON body:", JSON.stringify(jsonBody, null, 2));
+
+        // Send email using SendGrid
+        const emailResponse = await sendEmail(jsonBody);
+
         return new Response(JSON.stringify(jsonBody, null, 2), {
             headers: { "Content-Type": "application/json;charset=utf-8" },
         });
@@ -33,3 +37,49 @@ export async function onRequestPost(context) {
       return new Response("Error parsing JSON content", { status: 400 });
     }
   }
+
+
+  // Function to send an email using SendGrid
+async function sendEmail(formData) {
+    const sendGridApiKey = env.SENDGRID_API_KEY || 'couldnt-read-env'; // Replace with your SendGrid API key
+    console.log("SendGrid API key:", sendGridApiKey);
+    const sendGridUrl = "https://api.sendgrid.com/v3/mail/send";
+
+    // Construct the email payload
+    const emailPayload = {
+        personalizations: [
+            {
+                to: [{ email: "nate@appsensibility.com" }], // Replace with your recipient email
+                subject: "New Contact Form Submission",
+            },
+        ],
+        from: { email: "nate@appsensibility.com" }, // Replace with your sender email
+        content: [
+            {
+                type: "text/plain",
+                value: `
+                You have a new form submission:
+                Name: ${formData.name}
+                Email: ${formData.email}
+                Message: ${formData.message}
+                `,
+            },
+        ],
+    };
+
+    // Send the email using fetch
+    const response = await fetch(sendGridUrl, {
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${sendGridApiKey}`,
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(emailPayload),
+    });
+
+    if (!response.ok) {
+        throw new Error(`Failed to send email: ${response.statusText}`);
+    }
+
+    return response.json();
+}
