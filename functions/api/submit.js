@@ -77,6 +77,8 @@ async function sendEmail(formData, sendGridApiKey) {
             ],
         };
 
+        console.log("Message for SendGrid", JSON.stringify(emailPayload));
+
         // Send the email using fetch
         const response = await fetch(sendGridUrl, {
             method: "POST",
@@ -87,13 +89,17 @@ async function sendEmail(formData, sendGridApiKey) {
             body: JSON.stringify(emailPayload),
         });
 
+        console.log("Sent email to SendGrid");
+
         if (!response.ok) {
             throw new Error(`Failed to send email: ${response.statusText}`);
         }
 
+        console.log("Sent email to SendGrid - response.ok");
+
         return response.json();
     } catch (err) {
-        console.error("Failed to send email:", err);
+        console.log("Failed to send email:", err);
     }
 
     return null;
