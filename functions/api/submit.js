@@ -33,9 +33,9 @@ export async function onRequestPost(context) {
         console.log("Received JSON body:", JSON.stringify(jsonBody, null, 2));
 
         // Send email using SendGrid
-        const emailResponse = await sendEmail(jsonBody, sendGridApiKey);
+        await sendEmail(jsonBody, sendGridApiKey);
 
-        console.log("finished email method", emailResponse);
+        console.log("finished email method");
 
         return new Response(JSON.stringify(jsonBody, null, 2), {
             headers: { "Content-Type": "application/json;charset=utf-8" },
