@@ -194,14 +194,14 @@ section p, li {
 
 #why-us, #contact {
     background-image: url('assets/backgrounds/pexels-pixabay-257923-lightened-1920-q50-r94b78.webp');
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #contact {
     background-image: url('assets/backgrounds/pexels-fauxels-3184451-lightened-1920-q50-r94b78.webp');
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -270,8 +270,8 @@ section p, li {
 }
 
 .grid-item span {
-    margin-top: 8px; 
-    font-size: 18px; 
+    margin-top: 8px;
+    font-size: 18px;
 }
 
 .padding-2em {
@@ -289,7 +289,7 @@ section p, li {
 .what-we-do-cell {
     border-radius: 1em;
     background-image: url('assets/backgrounds/what-we-do/pexels-anna-nekrashevich-6802049-800-lightened-q50.jpg');
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -377,7 +377,7 @@ section p, li {
     padding: 15px;
     border: 1px solid #011124;
     border-radius: 10px;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 #contact form button {
@@ -552,4 +552,3 @@ html {
     position: relative;
     z-index: 2;
 }
-
